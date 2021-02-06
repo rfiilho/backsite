@@ -3,7 +3,7 @@
 $DB_SERVER = "localhost";
 $DB_USERNAME = "root";
 $DB_PASSWORD = "";
-$DB_NAME = "";
+$DB_NAME = "test";
 
 $link = new mysqli($DB_SERVER, $DB_USERNAME, $DB_PASSWORD, $DB_NAME);
 

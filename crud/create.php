@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         </div>
                         <div class="form-group">
                             <label>Conteúdo</label>
-                            <textarea name="conteudo" rows="10" class="form-control"></textarea>
+                            <textarea id="conteudo" name="conteudo" rows="10" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Tags</label>
@@ -66,5 +66,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </div>
             </div>        
         </div>
+
+    <script src="vendor/tinymce/tinymce.min.js"></script>
+    <script>
+      tinymce.init({
+        selector: '#conteudo',
+        height: 500,
+  plugins: [
+    'advlist autolink lists link image charmap print preview anchor',
+    'searchreplace visualblocks code fullscreen',
+    'insertdatetime media table paste imagetools wordcount'
+  ],
+  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image'
+      });
+    </script>
 </body>
 </html>
